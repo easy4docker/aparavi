@@ -46,3 +46,23 @@ ALTER USER 'root'@'localhost' IDENTIFIED BY 'adminpass';
 CREATE USER 'appuser'@'%' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON * . * TO 'appuser'@'%';
 
+-- test ui ---
+get for index and app.js
+http://localhost:10000
+
+API with post service
+URI: /api
+{
+    command: 'deleteById',
+    id : id
+}
+
+{
+    command: 'searchByNam',
+    name : name
+}
+
+{
+    command: 'loadData'
+}
+
