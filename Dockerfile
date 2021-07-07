@@ -34,5 +34,5 @@ VOLUME /var/lib/mysql
 
 COPY docker-entrypoint.sh /entrypoint.sh
 COPY healthcheck.sh /healthcheck.sh
-ENTRYPOINT chmod 777 /entrypoint.sh && /entrypoint.sh
+ENTRYPOINT sh /entrypoint.sh
 HEALTHCHECK CMD /healthcheck.sh
